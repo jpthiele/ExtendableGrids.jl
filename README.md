@@ -1,18 +1,18 @@
 # Extendable grid data container for numerical simulations
 
-[![Build status](https://github.com/j-fu/ExtendableGrids.jl/workflows/linux-macos-windows/badge.svg)](https://github.com/j-fu/ExtendableGrids.jl/actions)
-[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://j-fu.github.io/ExtendableGrids.jl/stable)
-[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://j-fu.github.io/ExtendableGrids.jl/dev)
+[![Build status](https://github.com/WIAS-PDELib/ExtendableGrids.jl/workflows/linux-macos-windows/badge.svg)](https://github.com/WIAS-PDELib/ExtendableGrids.jl/actions)
+[![](https://img.shields.io/badge/docs-stable-blue.svg)](https://WIAS-PDELib.github.io/ExtendableGrids.jl/stable)
+[![](https://img.shields.io/badge/docs-dev-blue.svg)](https://WIAS-PDELib.github.io/ExtendableGrids.jl/dev)
 
 
 Provide container structure `ExtendableGrid` with type stable content access and lazy content creation holding data for discretization
-grids for finite element and finite volume methods. 
-Used by [VoronoiFVM](https://github.com/j-fu/VoronoiFVM.jl) and  [GradientRobustMultiPhysics](https://github.com/chmerdon/GradientRobustMultiPhysics.jl),
+grids for finite element and finite volume methods.
+Used by [VoronoiFVM](https://github.com/WIAS-PDELib/VoronoiFVM.jl) and  [ExtendableFEM](https://github.com/WIAS-PDELib/ExtendableFEM.jl),
 a package for novel, gradient robust finite element methods.
 
 ## Additional functionality:
 
-  
+
 - Tools to create tensor product grids
 - Tools for grid modification
 
@@ -26,6 +26,6 @@ a package for novel, gradient robust finite element methods.
   by J. Shewchuk and [TetGen.jl](https://github.com/JuliaGeometry/TetGen.jl) which wraps the  TetGen mesh generator by H. Si.
 - [Triangulate.jl](https://github.com/JuliaGeometry/Triangulate.jl) and  [TetGen.jl](https://github.com/JuliaGeometry/TetGen.jl) extensions
 - [Metis.jl](https://github.com/JuliaSparse/Metis.jl) extension and partitioning for multithreading (under development)
-  
+
 ## Recent changes
-- Please look up the list of recent [changes](https://j-fu.github.io/ExtendableGrids.jl/stable/changes)
+- Please look up the list of recent [changes](https://WIAS-PDELib.github.io/ExtendableGrids.jl/stable/changes)

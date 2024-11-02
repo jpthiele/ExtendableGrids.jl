@@ -20,8 +20,8 @@ a package for novel, gradient robust finite element methods.
 - [Gmsh.jl](https://github.com/JuliaFEM/Gmsh.jl) extension. Please be aware about the fact that, while this package
   and  [Gmsh.jl](https://github.com/JuliaFEM/Gmsh.jl) are MIT licensed, the underlying binary code of Gmsh is
   distributed under the [GPLv2 license](https://gmsh.info/LICENSE.txt).
-- Visualization of these grids and of functions on them is avaialable in [GridVisualize.jl](https://github.com/j-fu/GridVisualize.jl).
-- [SimplexGridFactory](https://github.com/j-fu/SimplexGridFactory.jl) contains an API which allows to
+- Visualization of these grids and of functions on them is avaialable in [GridVisualize.jl](https://github.com/WIAS-PDELib/GridVisualize.jl).
+- [SimplexGridFactory](https://github.com/WIAS-PDELib/SimplexGridFactory.jl) contains an API which allows to
   create `ExtendableGrid` objects with  [Triangulate.jl](https://github.com/JuliaGeometry/Triangulate.jl) which wraps the Triangle mesh generator
   by J. Shewchuk and [TetGen.jl](https://github.com/JuliaGeometry/TetGen.jl) which wraps the  TetGen mesh generator by H. Si.
 - [Triangulate.jl](https://github.com/JuliaGeometry/Triangulate.jl) and  [TetGen.jl](https://github.com/JuliaGeometry/TetGen.jl) extensions

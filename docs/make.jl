@@ -23,7 +23,7 @@ function mkdocs()
              clean = false,
              doctest = true,
              authors = "J. Fuhrmann, Ch. Merdon, J. Taraz",
-             repo = "https://github.com/j-fu/ExtendableGrids.jl",
+             repo = "https://github.com/WIAS-PDELib/ExtendableGrids.jl",
              format = Documenter.HTML(; size_threshold_ignore,
                                        assets=String["assets/citations.css"],
                                       mathengine = MathJax3()),
@@ -58,4 +58,4 @@ end
 
 mkdocs()
 
-deploydocs(; repo = "github.com/j-fu/ExtendableGrids.jl.git")
+deploydocs(; repo = "github.com/WIAS-PDELib/ExtendableGrids.jl.git")

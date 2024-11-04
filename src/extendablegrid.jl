@@ -488,16 +488,13 @@ function Base.map(f::Function, grid::ExtendableGrid{Tc, Ti}) where {Tc,Ti}
     c1=coord[:,1]
     dim = dim_space(grid)
 
-    ## Check if f can be called with numeric args like f(x,y) and returns a number
+    ## Check if f can be called with number args like f(x,y)
     function checknumargs(f,args...)
 	if !hasmethod(f,Tuple(typeof.(args)))
 	    return false
 	end
 	try 
 	    y=f(args...)
-            if !isa(y,Number)
-                return false
-            end
 	catch e
 	    if isa(e,MethodError) 
 		return false
@@ -517,9 +514,6 @@ function Base.map(f::Function, grid::ExtendableGrid{Tc, Ti}) where {Tc,Ti}
 	end
 	try 
 	    y=f(v)
-            if !isa(y,Number)
-                return false
-            end
 	catch e
 	    if isa(e,MethodError) 
 		return false

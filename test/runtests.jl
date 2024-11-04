@@ -187,6 +187,14 @@ end
     @test map(fx,gx)==map(fv,gx)
     @test map(fxy,gxy)==map(fv,gxy)
     @test map(fxyz,gxyz)==map(fv,gxyz)    
+    
+    vfx(x)=[x]
+    vfxy(x,y)=[x,y]
+    vfxyz(x,y,z)=[x,y,z]
+    vfv(v)=v
+    @test map(vfx,gx)==map(x->[vfv(x)],gx)
+    @test map(vfxy,gxy)==map(vfv,gxy)
+    @test map(vfxyz,gxyz)==map(vfv,gxyz)    
 end
 
 function testrw(grid, format; confidence = :full, kwargs...)

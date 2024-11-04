@@ -15,15 +15,14 @@ jobs:
       fail-fast: false
       matrix:
         version:
-          - '1.9' # Replace this with the minimum Julia version that your package supports. E.g. if your package requires Julia 1.5 or higher, change this to '1.5'.
+          - 'lts' # Replace this with the minimum Julia version that your package supports. E.g. if your package requires Julia 1.5 or higher, change this to '1.5'.
           - '1'   # Leave this line unchanged. '1' will automatically expand to the latest stable 1.x release of Julia.
           - 'nightly'
         os:
           - ubuntu-latest
           - windows-latest
-          - macOS-12 # intel
           - macOS-13 # intel
-          - macOS-14 # arm
+          - macOS-latest # arm
         arch:
           - x64
           - aarch64
@@ -32,17 +31,13 @@ jobs:
             arch: aarch64
           - os: windows-latest
             arch: aarch64
-          - os: macOS-12
-            arch: aarch64
           - os: macOS-13
             arch: aarch64
-          - os: macOS-14
-            version: 1.6
-          - os: macOS-14
+          - os: macOS-latest
             arch: x64
     steps:
       - uses: actions/checkout@v4
-      - uses: julia-actions/setup-julia@v1
+      - uses: julia-actions/setup-julia@v2
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
@@ -65,7 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: julia-actions/setup-julia@v1
+      - uses: julia-actions/setup-julia@v2
         with:
           version: '1'
       - run: |

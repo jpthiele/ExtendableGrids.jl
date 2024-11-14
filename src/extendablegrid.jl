@@ -353,7 +353,7 @@ $(SIGNATURES)
 
 Space dimension of grid
 """
-dim_space(grid::ExtendableGrid) = size(grid[Coordinates], 1)
+dim_space(grid::ExtendableGrid) = haskey(grid, Coordinates) ? size(grid[Coordinates], 1) : 0
 
 """
 $(SIGNATURES)
@@ -367,14 +367,14 @@ $(SIGNATURES)
 
 Number of nodes in grid
 """
-num_nodes(grid::ExtendableGrid)::Int = size(grid[Coordinates], 2)
+num_nodes(grid::ExtendableGrid)::Int = haskey(grid,Coordinates) ? size(grid[Coordinates], 2) : 0
 
 """
 $(TYPEDSIGNATURES)
 
 Number of cells in grid
 """
-num_cells(grid::ExtendableGrid) = num_sources(grid[CellNodes])
+num_cells(grid::ExtendableGrid) = haskey(grid, CellNodes) ? num_sources(grid[CellNodes]) : 0
 
 """
 $(TYPEDSIGNATURES)

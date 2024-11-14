@@ -18,6 +18,11 @@ Aqua.test_persistent_tasks(ExtendableGrids)
 end
 
 
+@testset "Constructors" begin
+    # test whether the show() function throws an error
+    @test show( ExtendableGrid{Float64,Int32}() ) === nothing
+end
+
 @testset "Geomspace" begin
     function test_geomspace()
         X1 = geomspace(2.0, 3.0, 0.2, 0.2)

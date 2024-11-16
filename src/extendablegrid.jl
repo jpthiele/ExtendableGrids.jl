@@ -541,16 +541,38 @@ function Base.map(f::Function, grid::ExtendableGrid{Tc, Ti}) where {Tc,Ti}
     end
 end
 
-function Base.show(io::IO, grid::ExtendableGrid)
-    str = @sprintf("%s;\ndim: %d nodes: %d cells: %d bfaces: %d",
-                   typeof(grid), dim_space(grid), num_nodes(grid), num_cells(grid), num_bfaces(grid))
+#
+# Define two show methods, one extended for printing the repl, one
+# compact for e.g. interpolating into a string
+# See https://discourse.julialang.org/t/show-and-showcompact-on-custom-types/8493/6
+#
+function Base.show(io::IO, ::MIME"text/plain", grid::ExtendableGrid)
+    str = @sprintf("%s\n      dim = %7d\n   nnodes = %7d\n   ncells = %7d\n  nbfaces = %7d",
+                   typeof(grid),
+                   dim_space(grid), num_nodes(grid), num_cells(grid), num_bfaces(grid))
     if num_edges(grid) > 0
-        str*=@sprintf(", edges: %d", num_edges(grid))
+        str*=@sprintf("\n   nedges = %7d", num_edges(grid))
     end
     if num_partitions(grid)>1
-        str*="\npartitions/color: $(num_partitions_per_color(grid))" 
+        str*="\n  npartitions/color = $(num_partitions_per_color(grid))" 
     end
-    println(io, str)
+    print(io, str)
+    nothing
+end
+
+function Base.show(io::IO, grid::ExtendableGrid)
+    str = @sprintf("%s(dim=%d, nnodes=%d, ncells=%d, nbfaces=%d",
+                   typeof(grid),
+                   dim_space(grid), num_nodes(grid), num_cells(grid), num_bfaces(grid))
+    if num_edges(grid) > 0
+        str*=@sprintf(", nedges=%d", num_edges(grid))
+    end
+    if num_partitions(grid)>1
+        str*=", npart/color=$(num_partitions_per_color(grid))" 
+    end
+    str*=")"
+    print(io, str)
+    nothing
 end
 
 ### Tests for the gmsh extension:

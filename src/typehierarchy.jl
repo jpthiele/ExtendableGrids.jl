@@ -16,7 +16,7 @@ abstract type AbstractExtendableGridApexType end
 """
 $(TYPEDSIGNATURES)
 
-Print complete type hierachy for ExtendableGrids
+Print complete type hierarchy for ExtendableGrids
 """
 typehierarchy()=AbstractTrees.print_tree(AbstractExtendableGridApexType)
 

@@ -27,11 +27,11 @@ function simplexgrid(tio::TriangulateIO; flags=nothing)
     segmentmarkerlist = triout.segmentmarkerlist
 
     if size(pointlist, 2) == 0
-        error("Emtpy list of generated points. May be the geometry description is not watertight ?") |> throw
+        error("Empty list of generated points. May be the geometry description is not watertight ?") |> throw
     end
 
     if size(trianglelist, 2) == 0
-        error("Emtpy list of generated triangles. May be the geometry description is not watertight ?") |> throw
+        error("Empty list of generated triangles. May be the geometry description is not watertight ?") |> throw
     end
 
     simplexgrid(pointlist, trianglelist, cellregions, segmentlist, segmentmarkerlist)

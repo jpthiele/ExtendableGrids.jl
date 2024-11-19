@@ -988,7 +988,7 @@ function collectVolumes4Geometries(xgrid::ExtendableGrid{Tc,Ti}, ItemType) where
         xVolumes = zeros(Tc,nitems)
     end
 
-    # Introduce a function barrier: this will be compiled for each differnent type
+    # Introduce a function barrier: this will be compiled for each different type
     # of coordinate systems.
     function barrier!(xVolumes,xCoordinateSystem)
         for item = 1 : nitems

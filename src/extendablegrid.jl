@@ -65,7 +65,7 @@ end
 
 """
 $(TYPEDEF)
-1D Array of interger data
+1D Array of integer data
 """
 abstract type AbstractGridIntegerArray1D <: AbstractGridComponent end
 
@@ -280,7 +280,7 @@ $(TYPEDSIGNATURES)
 function instantiate end
 
 ############################################################
-# Verfication of inserted data
+# Verification of inserted data
 
 """
 ````

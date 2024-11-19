@@ -63,7 +63,7 @@ function prepare_edges!(grid::ExtendableGrid)
     # Create cell-node incidence matrix
     cellnode_adj=asparse(cellnodes)
     
-    # Create node-node incidence matrix for neigboring
+    # Create node-node incidence matrix for neighboring
     # nodes. 
     nodenode_adj=cellnode_adj*transpose(cellnode_adj)
 
@@ -115,7 +115,7 @@ function prepare_edges!(grid::ExtendableGrid)
             
             for irow=nodenode_adj.colptr[n1]:nodenode_adj.colptr[n1+1]-1
                 if nodenode_adj.rowval[irow]==n2
-                    # If the coresponding entry has been found, set its
+                    # If the corresponding entry has been found, set its
                     # value. Note that this introduces a different edge orientation
                     # compared to the one found locally from cell data
                     celledges[iedge,icell]=irow
@@ -216,7 +216,7 @@ function prepare_bedges!(grid)
 
             for irow = nodenode_adj.colptr[n1]:nodenode_adj.colptr[n1+1]-1
                 if nodenode_adj.rowval[irow]==n2
-                    # If the coresponding entry has been found, set its
+                    # If the corresponding entry has been found, set its
                     # value. Note that this introduces a different edge orientation
                     # compared to the one found locally from cell data
                     bfaceedges[ibedge, ibface] = irow

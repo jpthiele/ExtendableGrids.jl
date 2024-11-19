@@ -54,7 +54,7 @@ function geomspace(a, b, ha, hb ; tol=1.0e-10, maxiterations=100)
         end
 
         # define initial number of intervals from
-        # average of minmal and maximal h
+        # average of minimal and maximal h
         n=Int(ceil((2.0*l/(h0+hl))))
         
 

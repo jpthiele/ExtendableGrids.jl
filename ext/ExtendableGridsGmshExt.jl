@@ -147,7 +147,7 @@ This function just reads an msh file, and creates a gmsh.model and then calls th
 This function is called in 'mixedgrid_from_gmsh'
 `Tc` is the type of coordinates, `Ti` is the index type.
 
-This function initalizes and finalized gmsh.
+This function initializes and finalized gmsh.
 
 """
 function gmshfile_to_mixedgrid(filename::String, Tc, Ti)
@@ -166,7 +166,7 @@ function simplexgrid_to_gmshfile(grid::ExtendableGrid, filename::String)
 This function takes a simplexgrid, uses 'grid_to_mod' to create a corresponding gmsh module
 Then it writes the module to a file.
 
-This function initalizes and finalized gmsh.
+This function initializes and finalized gmsh.
 
 """
 function simplexgrid_to_gmshfile(grid::ExtendableGrid; filename::String = "")

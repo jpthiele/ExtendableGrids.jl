@@ -6,7 +6,7 @@ TDict means: extendable containers with type stable content access and lazy cont
 ### Problem to be addressed
 
 In certain contexts it is desirable to use containers with core components
-which are user extendable and allow for type stable component acces. Moreover,
+which are user extendable and allow for type stable component access. Moreover,
 some components are necessary on demand only, so they should be created lazily.
 Furthermore, there should be a kind of safety protocol which prevents errors
 from typos in component names etc.
@@ -18,7 +18,7 @@ Julia default data structures do not provide these properties.
   - Julia structs are not extendable, fields and their types are fixed upon definition
   - If we don't fix types of struct fields they become Any and a source 
     for type instability
-  - The situation could be fixed if `getfield` could be overloaded but it cant't
+  - The situation could be fixed if `getfield` could be overloaded but it can't
 
 #### `Dict`
   - Plain Dicts with flexible value types are a source of type instability

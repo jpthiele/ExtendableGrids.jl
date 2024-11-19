@@ -11,10 +11,10 @@
 - An `ExtendableGrid` given by the default constructor can be displayed by `show()` (#70)
 
 ## 2024-10-28
-Moved repositiory from https://github.com/j-fu/ExtendableGrids.jl to https://github.com/WIAS-PDELib/ExtendableGrids.jl. [WIAS-PDELib](https://github.com/WIAS-PDELib/) is a github organization created to collectively manage the Julia packages developed under the lead of the [WIAS Numerical Mathematics and Scientific Computing](https://wias-berlin.de/research/rgs/fg3)  research group. According to the [github docs on repository transfer](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#whats-transferred-with-a-repository), all links to the previous repository location are automatically redirected to the new location, and all relationships with forks stay intact.
+Moved repository from https://github.com/j-fu/ExtendableGrids.jl to https://github.com/WIAS-PDELib/ExtendableGrids.jl. [WIAS-PDELib](https://github.com/WIAS-PDELib/) is a github organization created to collectively manage the Julia packages developed under the lead of the [WIAS Numerical Mathematics and Scientific Computing](https://wias-berlin.de/research/rgs/fg3)  research group. According to the [github docs on repository transfer](https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository#whats-transferred-with-a-repository), all links to the previous repository location are automatically redirected to the new location, and all relationships with forks stay intact.
 
 ## [1.10.0]  - 2024-09-29
-- Allow to map funtions with vector arguments onto grid
+- Allow to map functions with vector arguments onto grid
   E.g. for `f(x)=sum(x)` one can now do `map(f,grid)`.
 - Make parts of simplexgrid constructor optional. 
   E.g. it is possible now to do just `simplexgrid(coord, cellnodes)`. In that
@@ -945,7 +945,7 @@ should be replaced some time.
 - Some fixes for pyplot in Pluto notebooks.
 
 Don't call PyPlot.show() and PyPlot.pause(), as this
-must be handeled by the user.
+must be handled by the user.
 
 - Bfacemask! now allows to add new boundary facets in 2D
 
@@ -1035,7 +1035,7 @@ Added Examples to docs
 
 ###  Features
 
-- Add [XYZ]Cordinates to grid if they have been there.
+- Add [XYZ]Coordinates to grid if they have been there.
 This allows rectangular grid plotting (e.g. with Plots)
 
 - Fixed some plotting, show(grid)
@@ -1132,7 +1132,7 @@ added DocStringExtensions
 
 - Typo
 
-- Replaced all occurences of XGrid
+- Replaced all occurrences of XGrid
 
 - Add travis, tagbot
 

@@ -15,19 +15,19 @@ coordinatesystems()=AbstractTrees.print_tree(AbstractCoordinateSystem)
 
 """
 $(TYPEDEF)
-1D cartesion coordinate system (unknown `x`)
+1D cartesian coordinate system (unknown `x`)
 """
 abstract type Cartesian1D   <: AbstractCoordinateSystem end   
 
 """
 $(TYPEDEF)
-2D cartesion coordinate system (unknowns `x,y`)
+2D cartesian coordinate system (unknowns `x,y`)
 """
 abstract type Cartesian2D   <: AbstractCoordinateSystem end   
 
 """
 $(TYPEDEF)
-2D cartesion coordinate system (unknowns `x,y,z`)
+2D cartesian coordinate system (unknowns `x,y,z`)
 """
 abstract type Cartesian3D   <: AbstractCoordinateSystem end   
 

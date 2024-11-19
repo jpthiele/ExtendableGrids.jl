@@ -87,7 +87,7 @@ gridplot(pgrid1; cellcoloring = :partitions, linewidth = 0.1)
 
 # ╔═╡ ac233091-6101-4577-9556-1b5ea4aabbec
 md"""
-The neigborhood graph of the partitions gets colored in such a way that
+The neighborhood graph of the partitions gets colored in such a way that
 adjacent partitions have different colors. As a result, e.g. FEM assembly threads can run in parallel on partitions with the same color. If we color cells by their partition color, we get the following plot:
 """
 

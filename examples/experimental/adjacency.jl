@@ -97,7 +97,7 @@ function test_adj_performance(n=100_000)
     # Reorganize adjacency as variable target adjacency
     vadj=VariableTargetAdjacency(matrix)
 
-    # Direct acces should be slower than matrix access
+    # Direct access should be slower than matrix access
     print("  Direct vadj access:")
     @time begin
         for irun=1:100
@@ -111,14 +111,14 @@ function test_adj_performance(n=100_000)
     end
     
     
-    # Direct acces should be slower than matrix access
+    # Direct access should be slower than matrix access
     print("      Call with vadj:")
     @time sum_adj(vadj)
     println()
     
     ############################################
     # Assign matrix to adj::Adjacency in struct
-    # As Adjacency is a union, this could lead to perfromance problems,
+    # As Adjacency is a union, this could lead to performance problems,
     # but we have "UnionSplitting": https://julialang.org/blog/2018/08/union-splitting/
     tstruct=TestStruct(matrix)
     tadj=tstruct.adj
@@ -145,7 +145,7 @@ function test_adj_performance(n=100_000)
 
     ############################################
     # Assign matrix to adj::Adjacency in struct
-    # As Adjacency is a union, this could lead to perfromance problems,
+    # As Adjacency is a union, this could lead to performance problems,
     # but we have "UnionSplitting": https://julialang.org/blog/2018/08/union-splitting/
     tstruct_v=TestStruct(vadj)
     tvadj=tstruct.adj
@@ -190,7 +190,7 @@ function test_adj_performance(n=100_000)
         end
     end
 
-    # After "unboxing" when passin the data, specialized
+    # After "unboxing" when passing the data, specialized
     # code for matrix is called
     print("      Call with aadj:")
     @time sum_adj(aadj)

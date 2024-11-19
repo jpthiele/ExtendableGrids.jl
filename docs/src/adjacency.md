@@ -8,7 +8,7 @@ whose entries a 0 or 1. While such a matrix always can be stored
 as a SparseMatrixCSC, in general this would be a waste of storage.
 
 For the general case, it is sufficient to only store the column start
-indieces and the column entries (row numbers), and to implicitely assume
+indieces and the column entries (row numbers), and to implicitly assume
 that nonzero entries are 1. This kind of storage is realised in a
 VariableTargetAdjacency.
     

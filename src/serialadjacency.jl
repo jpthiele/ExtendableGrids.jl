@@ -28,7 +28,7 @@ SerialVariableTargetAdjacency()=SerialVariableTargetAdjacency(Int64)
 
 """
 $(TYPEDSIGNATURES)
-Show adjacency (in trasposed form; preliminary)
+Show adjacency (in transposed form; preliminary)
 """
 function Base.show(io::IO,adj::SerialVariableTargetAdjacency)
     for isource=1:num_sources(adj)

@@ -99,7 +99,7 @@ end
 
 
 function twowinloop()
-    # in order to make this work we neet to switch form
+    # in order to make this work we need to switch from
     # PyPlot.plot to ax.plot.
     ctx1=PlotterContext(PyPlot,fignumber=1,legend=false)
     ctx2=PlotterContext(PyPlot,fignumber=2,legend=false)
@@ -178,7 +178,7 @@ end
 Layout plan:
 
 PlotterContext(layout=(2,3)) creates array of contexts
-ctx[1,2]  contains subcontexts for ploting into
+ctx[1,2]  contains subcontexts for plotting into
 
 update!(ctx) updates at end of two figure loop
 

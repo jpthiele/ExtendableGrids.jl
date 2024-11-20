@@ -11,8 +11,8 @@ We distinguish the following element classes characterized by their dimension:
 | Element class | Meaning                                                                    |
 | :--           | :--                                                                        |
 | Node          | 0-dimensional node                                                         |
-| Edge          | 1-dimensional line connecting two neigboring nodes                         |
-| Face          | codimension 1 object separating a cell from outer space or neigboring cell |
+| Edge          | 1-dimensional line connecting two neighboring nodes                         |
+| Face          | codimension 1 object separating a cell from outer space or neighboring cell |
 | Cell          | codimension 0 object                                                       |
 | BFace         | Face situated at inner or domain boundary                                  |
 | Region        | number to be used to characterize subdomains, contacts etc.                |
@@ -58,7 +58,7 @@ g[MyComponent]=13
 show(g)
 ```
 
-Alternatively, component creation can be perfomed lazily. For this
+Alternatively, component creation can be performed lazily. For this
 purpose one needs to define an `instantiate` method:
 
 

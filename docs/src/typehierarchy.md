@@ -1,6 +1,6 @@
 # Type hierarchy
 The package defines a hierarchy of abstract types to
-handle grid compoments. The full tree is listed here:
+handle grid components. The full tree is listed here:
 
 ```@example
 using ExtendableGrids # hide

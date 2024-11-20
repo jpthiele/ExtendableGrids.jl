@@ -101,7 +101,7 @@ abstract type ZCoordinates <: AbstractGridFloatArray1D end
 
 Constructor for 1D grid.
 
-Construct 1D grid from an array of node cordinates.
+Construct 1D grid from an array of node coordinates.
 It creates two boundary regions with index 1 at the left end and
 index 2 at the right end by default.
 
@@ -662,7 +662,7 @@ Merge two grids along their common boundary facets.
 - g1regions: boundary regions to be used from grid1. Default: all.
 - g2regions: boundary regions to be used from grid2. Default: all.
 - interface: if nonzero, create interface region in new grid, otherwise, ignore
-- strict: Assume all bfaces form specfied regions shall be matched, throw error on failure
+- strict: Assume all bfaces form specified regions shall be matched, throw error on failure
 - tol:  Distance below which two points are seen as identical. Default: 1.0e-10
 - naive: use naive quadratic complexity matching (for checking backward compatibility). Default: false
 

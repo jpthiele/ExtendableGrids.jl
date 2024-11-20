@@ -80,7 +80,7 @@ function writegrid(fname::String, g::ExtendableGrid, ::Type{Val{:sg}}; version=v
     cellregions = g[CellRegions]
     bfaceregions = g[BFaceRegions]
 
-    # TODO: replace @sprintf by someting non-allocating
+    # TODO: replace @sprintf by something non-allocating
     open(fname, "w") do file
         write(file, @sprintf("SimplexGrid"))
         write(file, @sprintf(" "))

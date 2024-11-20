@@ -53,7 +53,7 @@ function coloredpartition(cc; npart = 4, depth = 0, maxdepth=4, separatorwidth=2
     ncells = length(primarypartition)
     sepamark = zeros(Bool, ncells)
     
-    # Calculate separator: all cells with neigbours of a different partition
+    # Calculate separator: all cells with neighbours of a different partition
     # go into the separator
     nx = 0
     for icell = 1:ncells

@@ -93,7 +93,7 @@ Create subgrid from list of regions.
 - `transform` (kw parameter): transformation function between
    grid and subgrid coordinates acting on one point.
 - `coordinatesystem`: if `boundary==true`, specify coordinate system for the boundary.
-   Default:  if parent coordinatesystem is cartesian, just the cooresponding codim1 coordinatesystem, 
+   Default:  if parent coordinatesystem is cartesian, just the corresponding codim1 coordinatesystem, 
    otherwise: `nothing`, requiring user specification for use of e.g. CellFinder with the subgrid.
 - `project`: project coordinates onto  subgrid dimension
 
@@ -241,7 +241,7 @@ function subgrid(parent,
             end
             # All nodes may be in subgrid, but this still doesn't mean
             # yet that the bface is in subgrid - we need to check if the
-            # neigboring cells are in the subgrid
+            # neighboring cells are in the subgrid
             # TODO: this even may be sufficient!
             insubgrid=false
             for itarget=1:num_targets(bfacecells,ibface)

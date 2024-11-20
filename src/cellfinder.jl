@@ -17,7 +17,7 @@ struct CellFinder{Tv,Ti}
     cx::Vector{Tv}
 end
 
-## postprocessing function that calcualte conditions to decide over which face to go next
+## postprocessing function that calculate conditions to decide over which face to go next
 function postprocess_xreftest!(xreftest::AbstractArray{Tv}, ::Type{<:Edge1D}) where {Tv}
     xreftest[2] = 1 - xreftest[1]
     return nothing

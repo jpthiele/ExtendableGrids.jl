@@ -1,6 +1,6 @@
 ###########################################
 # Define three modules with different
-# but compatible data strucures
+# but compatible data structures
 #############
 module ModFoo
 
@@ -35,9 +35,9 @@ end
 #############################################
 # The Rosetta module stores code which knows  
 # how to convert between the data structures of the
-# different modules without drawing in all the depedencies
+# different modules without drawing in all the dependencies
 
-# If this would be a package, dependecies only would be used
+# If this would be a package, dependencies only would be used
 # in the unit tests, not while using this package
 
 module Rosetta

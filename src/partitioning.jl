@@ -2,7 +2,7 @@
     $(TYPEDEF)
 
 Key type describing colors of partitions. These correspond to 
-a coloring of the neigborhood graphs of partitions such that 
+a coloring of the neighborhood graphs of partitions such that 
 operations (e.g. FEM assembly) on partitions of a given color can 
 be performed in parallel.
 
@@ -30,7 +30,7 @@ abstract type PartitionCells <: AbstractGridIntegerArray1D end
 """
     $(TYPEDEF)
 
-Key type describing the bondary faces of a given partition.
+Key type describing the boundary faces of a given partition.
 
 `grid[PartitionBFaces]` returns an integer vector describing 
 the boundary faces of a partition  given by its number.
@@ -264,7 +264,7 @@ end
                        verbose=true, 
                        cellpartonly=false)
 
-Check correctness of cell partitioning, necessesary for parallel assembly:
+Check correctness of cell partitioning, necessary for parallel assembly:
 - Check if every node belongs to one of the cell partitions
 - Check if no node belongs to two cell partitions of the same color at once
 
@@ -349,7 +349,7 @@ function check_partitioning(grid::ExtendableGrid{Tc, Ti}; verbose=true, cellpart
                         mpart=mark[cn[k,icell]]
                         if mpart!=0 && mpart !=ipart
                             if verbose 
-                                @warn "Found node $(cn[k,icell]) neigboring to both partitions $ipart,$mpart of color $color"
+                                @warn "Found node $(cn[k,icell]) neighboring to both partitions $ipart,$mpart of color $color"
                             end
                             ok=false
                         end
@@ -369,7 +369,7 @@ end
     $(SIGNATURES)
 
 (internal)
-Create neigbourhood graph for given partitioning.
+Create neighbourhood graph for given partitioning.
 """
 function partgraph(cellpartitions,ncellpartitions,cellcelladj)
     gr=Graphs.Graph(ncellpartitions)
@@ -408,7 +408,7 @@ end
 """
     $(TYPEDEF)
 
-Subdivide grid into `npart` partitions using `Metis.partition` and color the resulting partition neigborhood graph.
+Subdivide grid into `npart` partitions using `Metis.partition` and color the resulting partition neighborhood graph.
 This requires to import Metis.jl in order to trigger the corresponding extension.
 
 This algorithm allows to control  the overall number of partitions. The number of partitions
@@ -430,7 +430,7 @@ end
 Subdivide grid into `npart` partitions using `Metis.partition` and calculate cell separators
 from this partitioning. The initial partitions  get color 1, and the separator gets color 2.
 This is continued recursively with partitioning of the separator into `npart` partitions and
-calculating the spearator of the separator, giving it color 3.
+calculating the separator of the separator, giving it color 3.
 
 This algorithm allows to control  the number of partitions in color 1 which correspond
 to the bulk of the work. The overall number of partitions will be in the range of `3*npart`.
@@ -515,16 +515,16 @@ end
 (internal)
 Induce node partitioning from cell partitioning of `grid`.
 The algorithm assumes that nodes get the partition number from the partition
-numbers of the cells having this node in common. If these are differnt, the highest
+numbers of the cells having this node in common. If these are different, the highest
 number is taken.
 
 Node partitioning should support parallel matrix-vector products with `SparseMatrixCSC`.
 The current algorithm assumes that nodes get the partition number from the partition
-numbers of the cells having this node in common. If these are differnt, the highest
+numbers of the cells having this node in common. If these are different, the highest
 number is taken.
 
 Simply inducing node partition numbers from cell partition numbers does not always fulfill the  condition that
-there is no node which is neigbour of nodes from two different partition with the same color.
+there is no node which is neighbour of nodes from two different partition with the same color.
 
 This situation is detected and corrected by joining respective critical partitions,
 sacrificing a bit of  parallel efficiency for correctness.
@@ -607,7 +607,7 @@ function induce_node_partitioning!(grid::ExtendableGrid{Tc,Ti},cn,nc; trivial=fa
         @info "Renumbering: $idpart\n"
 
         # Re-assign the respective lower partition numbers for the problem cases.
-        # The parttions with the higher numbers will be just empty.
+        # The partitions with the higher numbers will be just empty.
         # This renders the critical nodes into the same partition, so they
         # will be accessed from the same parallel task.
         for inode=1:num_nodes(grid)
@@ -675,7 +675,7 @@ end
 (internal)
 Induce edge partitioning from cell partitioning of `grid`.
 The algorithm assumes that nodes get the partition number from the partition
-numbers of the cells having this node in common. If these are differnt, the highest
+numbers of the cells having this node in common. If these are different, the highest
 number is taken.
 
 This method triggers creation of rather complex edge information and should be called
@@ -771,7 +771,7 @@ end
                    keep_nodepermutation = false,
                    edges = false )
 
-Partition cells of `grid` according to `alg`, such that the neigborhood graph
+Partition cells of `grid` according to `alg`, such that the neighborhood graph
 of partitions is colored in such a way, that all partitions with  a given color can be worked on in parallel. 
 Cells are renumbered such that cell numbers for a given partition are numbered contiguously. 
 

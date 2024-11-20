@@ -50,7 +50,7 @@ VariableTargetAdjacency(m::Matrix{T}) where T=VariableTargetAdjacency{T}(vec(m),
 """
 $(TYPEDSIGNATURES)
 
-Show adjacency (in trasposed form; preliminary)
+Show adjacency (in transposed form; preliminary)
 """
 function Base.show(io::IO,adj::VariableTargetAdjacency)
     for isource=1:num_sources(adj)

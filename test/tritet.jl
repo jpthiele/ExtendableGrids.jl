@@ -93,4 +93,3 @@ end
     @test isa(prism(),ExtendableGrid)
     @test isa(material_prism(),ExtendableGrid)
 end
-

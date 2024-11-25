@@ -46,4 +46,3 @@ function allsubtypes(TApex)
     end
     allsubtypes!(Type[],TApex)
 end
-

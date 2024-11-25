@@ -77,4 +77,3 @@ show(g[NodeCells])
 Modules = [ExtendableGrids]
 Pages = ["extendablegrid.jl"]
 ```
-

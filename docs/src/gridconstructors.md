@@ -13,4 +13,3 @@ Private = false
 Modules = [ExtendableGrids]
 Pages = ["commongrids.jl"]
 ```
-

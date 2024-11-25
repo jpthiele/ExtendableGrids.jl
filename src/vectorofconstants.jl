@@ -56,9 +56,3 @@ $(TYPEDSIGNATURES)
 Shortcut for unique
 """
 Base.unique(v::VectorOfConstants)=[v.val]
-
-
-
-
-
-

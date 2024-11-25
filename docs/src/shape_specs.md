@@ -8,5 +8,3 @@
 Modules = [ExtendableGrids]
 Pages = ["shape_specs.jl"]
 ```
-
-

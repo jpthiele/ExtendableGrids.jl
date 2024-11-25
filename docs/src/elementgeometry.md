@@ -16,4 +16,3 @@ elementgeometries() #hide
 Modules = [ExtendableGrids]
 Pages = ["elementgeometry.jl"]
 ```
-

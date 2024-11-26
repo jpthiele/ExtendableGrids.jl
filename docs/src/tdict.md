@@ -47,4 +47,3 @@ See above ...
 #### Cons
 - Implemented using a Dict, so access is inherently slower than access to a component
   of a struct. Therefore it is not well suited for inner loops.
-

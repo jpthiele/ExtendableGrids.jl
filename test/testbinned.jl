@@ -24,4 +24,3 @@ end
 @test testbinning(rand(2, 10000))
 @test testbinning(rand(3, 10))
 @test testbinning(rand(3, 10000))
-

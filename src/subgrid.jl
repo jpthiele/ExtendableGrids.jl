@@ -340,6 +340,3 @@ $(TYPEDSIGNATURES)
 Return size of vector view.
 """
 Base.size(a::SubgridVectorView)=(size(a.node_in_parent,1),)
-
-
-

@@ -200,4 +200,3 @@ function test_adj_performance(n=100_000)
     """
     nothing
 end
-

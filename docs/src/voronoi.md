@@ -5,4 +5,3 @@
 Modules = [ExtendableGrids]
 Pages = ["voronoi.jl"]
 ```
-

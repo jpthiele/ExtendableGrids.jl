@@ -252,4 +252,3 @@ function ringsector(rad,ang; eltype=Triangle2D)
     end
     simplexgrid(coord,cells,cellregions,bfaces,bfaceregions)
 end
-

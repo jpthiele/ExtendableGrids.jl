@@ -34,8 +34,7 @@ jobs:
       # Download the nightly version of Julia
       - uses: julia-actions/setup-julia@v2
         with:
-          version: nightly
-          arch: aarch64
+          version: 'nightly'
 
       # Add DownstreamTester to the local Julia environment and run nightly()
       - name: Run nightly()

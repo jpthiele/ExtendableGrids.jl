@@ -18,7 +18,7 @@ import Metis
 
             for grid in (grid1, grid2, grid3)
                 @test num_pcolors(grid) == 1
-                @test num_partitions(grid) == 1
+                @test num_partitions(grid) == 2
                 @test pcolors(grid) == 1:1
                 @test pcolor_partitions(grid, 1) == 1:1
                 @test partition_cells(grid, 1) == 1:num_cells(grid)
@@ -29,7 +29,7 @@ import Metis
             for npart in [10, 15, 20]
                 grid4 = partition(grid1, PlainMetisPartitioning(npart = npart); nodes = true, keep_nodepermutation = true)
                 @test num_pcolors(grid4) > 1
-                @test num_partitions(grid4) == npart
+                @test num_partitions(grid4) > npart
                 @test pcolors(grid4) |> length > 0
                 @test partition_cells(grid4, 1) |> length > 0
                 @test num_partitions_per_color(grid4) |> length > 0

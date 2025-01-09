@@ -36,6 +36,11 @@ jobs:
         with:
           version: 'nightly'
 
+      - name: setup git 
+        run: |
+          git config --global user.email "thiele@wias-berlin.de"
+          git config --global user.name "Jan Philipp Thiele"
+
       # Add DownstreamTester to the local Julia environment and run nightly()
       - name: Run nightly()
         working-directory: ./main

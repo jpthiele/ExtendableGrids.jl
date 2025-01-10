@@ -1,0 +1,36 @@
+{
+  "commithash": "6adb9016170545fb9b1ab3acf3c53150e572c6ae",
+  "nightlyversion": "1.12.0-DEV.1869",
+  "failures": [
+    {
+      "suite": "partitioning",
+      "casename": "num_partitions(grid4) > npart",
+      "message": "15 > 15",
+      "location": "test/partitioning.jl:32"
+    },
+    {
+      "suite": "partitioning",
+      "casename": "num_partitions(grid4) > npart",
+      "message": "20 > 20",
+      "location": "test/partitioning.jl:32"
+    },
+    {
+      "suite": "writeVTK",
+      "casename": "sha_code == \"9596c59f6b0870dd4a42a7a48725c2257f260757e15cc5ac433e5e8e235659d9\"",
+      "message": "\"28a786f7c929dd592eb428d95cb1dcd77e92bd2dce696613ac26440d44597aea\" == \"9596c59f6b0870dd4a42a7a48725c2257f260757e15cc5ac433e5e8e235659d9\"",
+      "location": "test/runtests.jl:484"
+    },
+    {
+      "suite": "partitioning",
+      "casename": "num_partitions(grid) == 2",
+      "message": "1 == 2",
+      "location": "test/partitioning.jl:21"
+    },
+    {
+      "suite": "partitioning",
+      "casename": "num_partitions(grid4) > npart",
+      "message": "10 > 10",
+      "location": "test/partitioning.jl:32"
+    }
+  ]
+}

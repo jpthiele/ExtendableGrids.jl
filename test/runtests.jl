@@ -468,7 +468,7 @@ end
 
     # ensure calculation of these data is free of roundoff errors
     point_data = map((x, y, z) -> (x + y + z), g)
-    field_data = [1.0, 2, 3, 4, 5, 7]
+    field_data = [1.0, 2, 3, 4, 5, 6]
 
     writeVTK(
         "testfile_writevtk.vtu", g;

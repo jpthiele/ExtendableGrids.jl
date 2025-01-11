@@ -18,7 +18,7 @@ import Metis
 
             for grid in (grid1, grid2, grid3)
                 @test num_pcolors(grid) == 1
-                @test num_partitions(grid) == 2
+                @test num_partitions(grid) == 1
                 @test pcolors(grid) == 1:1
                 @test pcolor_partitions(grid, 1) == 1:1
                 @test partition_cells(grid, 1) == 1:num_cells(grid)

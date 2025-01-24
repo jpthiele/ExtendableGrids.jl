@@ -1,5 +1,18 @@
 [
   {
+    "number": 28,
+    "repo": "jpthiele/issuetest",
+    "open": [],
+    "fixed": [
+      {
+        "suite": "writeVTK",
+        "casename": "sha_code == \"9596c59f6b0870dd4a42a7a48725c2257f260757e15cc5ac433e5e8e235659d9\"",
+        "message": "\"28a786f7c929dd592eb428d95cb1dcd77e92bd2dce696613ac26440d44597aea\" == \"9596c59f6b0870dd4a42a7a48725c2257f260757e15cc5ac433e5e8e235659d9\"",
+        "location": "test/runtests.jl:484"
+      }
+    ]
+  },
+  {
     "number": 29,
     "repo": "jpthiele/issuetest",
     "open": [],
@@ -27,19 +40,6 @@
         "casename": "num_partitions(grid4) > npart",
         "message": "20 > 20",
         "location": "test/partitioning.jl:32"
-      }
-    ]
-  },
-  {
-    "number": 28,
-    "repo": "jpthiele/issuetest",
-    "open": [],
-    "fixed": [
-      {
-        "suite": "writeVTK",
-        "casename": "sha_code == \"9596c59f6b0870dd4a42a7a48725c2257f260757e15cc5ac433e5e8e235659d9\"",
-        "message": "\"28a786f7c929dd592eb428d95cb1dcd77e92bd2dce696613ac26440d44597aea\" == \"9596c59f6b0870dd4a42a7a48725c2257f260757e15cc5ac433e5e8e235659d9\"",
-        "location": "test/runtests.jl:484"
       }
     ]
   }

@@ -19,15 +19,15 @@
     "fixed": [
       {
         "suite": "partitioning",
-        "casename": "num_partitions(grid4) > npart",
-        "message": "20 > 20",
-        "location": "test/partitioning.jl:32"
-      },
-      {
-        "suite": "partitioning",
         "casename": "num_partitions(grid) == 2",
         "message": "1 == 2",
         "location": "test/partitioning.jl:21"
+      },
+      {
+        "suite": "partitioning",
+        "casename": "num_partitions(grid4) > npart",
+        "message": "10 > 10",
+        "location": "test/partitioning.jl:32"
       },
       {
         "suite": "partitioning",
@@ -38,7 +38,7 @@
       {
         "suite": "partitioning",
         "casename": "num_partitions(grid4) > npart",
-        "message": "10 > 10",
+        "message": "20 > 20",
         "location": "test/partitioning.jl:32"
       }
     ]
